@@ -2,7 +2,7 @@
 
 describe('my first Test Suite', function()
 {
-    it.skip('my first test case', function(){
+    it('my first test case', function(){
 
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         cy.get('.search-keyword').type('ca');
@@ -11,6 +11,7 @@ describe('my first Test Suite', function()
         //cy.get('.product').should('have.length',4);\
         // for the same csslocator:visible should be written in command
         cy.get('.product:visible').should('have.length',4);
+        cy.xpath('//div[text()="GREEN"]').should('be.visible');
     })
 
     it.skip('my second test case', function() {
@@ -22,7 +23,7 @@ describe('my first Test Suite', function()
         cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click();
     })
 
-    it('my third test case', function(){
+    it.skip('my third test case', function(){
        cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
        cy.get('.search-keyword').type('ca');
        cy.wait(2000);
@@ -39,7 +40,7 @@ describe('my first Test Suite', function()
         })
     })
     
-    it('my fourth test case', function(){
+    it.skip('my fourth test case', function(){
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         // Follwoing two lines will make the cypress internal promice structue break, which break the execution
         //const logo = cy.get('.brand');
@@ -51,7 +52,7 @@ describe('my first Test Suite', function()
         })
     })
 
-    it('my fifth test case', function() {
+    it.skip('my fifth test case', function() {
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         cy.get('.search-keyword').type('ca');
         cy.wait(2000);
@@ -60,7 +61,7 @@ describe('my first Test Suite', function()
         cy.get('@prodctsLocator').find('.product').should('have.length',4);
     })
 
-    it('my sixth test case', function() {
+    it.skip('my sixth test case', function() {
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         cy.get('.search-keyword').type('ca');
         cy.wait(2000);
@@ -68,7 +69,7 @@ describe('my first Test Suite', function()
         cy.log('typed ca in Search');
     })
 
-    it('my seventh test case', function() {
+    it.skip('my seventh test case', function() {
         // cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         // cy.get('.search-keyword').type('ca');
         // cy.wait(2000);
@@ -82,7 +83,7 @@ describe('my first Test Suite', function()
         cy.wait(2000);
     })
 
-    it('my eighth test case', function(){
+    it.skip('my eighth test case', function(){
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
         // Follwoing two lines will make the cypress internal promice structue break, which break the execution
         //const logo = cy.get('.brand');

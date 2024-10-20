@@ -1,6 +1,6 @@
 /// <reference types='Cypress' />
 
-describe('Various Properties through Cypress', function() {
+describe('Various Properties through Cypress - 1', function() {
 
     it('Check box validation', function() {
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
